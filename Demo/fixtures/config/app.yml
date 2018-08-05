@@ -1,0 +1,36 @@
+app_name: GoWAF Demo WebApp
+domain: nlaak.com
+base_url: http://localhost:8090
+port: 8090
+static_dir: ./fixtures/assets
+view_dir: views
+# database
+database: "postgres"
+#database_conn: "postgres://postgres@localhost/gowaf-templates?sslmode=disable"
+database_conn: "postgres://www.gwf.io/gowaf-templates?user=gowafapp&password=Read0nly!&sslmode=disable"
+automigrate: true
+no_model: false
+load_test_data: true
+#options
+verbose: true
+googleid: ""   #Empty = not enabled
+session_name: "gowaf_demo_webapp"
+flash_time: 3500   #time in milliseconds to show the message before hiding (default is 3500)
+flash_stack: 5   #how many message to display at once (default is 6)
+
+#################
+# enable features
+#################
+notifications: false
+mail: false
+profile: false
+#themecolor requires that profile be enabled as well
+themecolor: megna  
+
+#################
+# Email Feature
+#################
+mail_server: "mail.nlaak.com"
+mail.port: 587
+mail_user: "gomail"
+mail.password: "password" 

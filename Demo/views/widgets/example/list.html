@@ -1,0 +1,191 @@
+<!-- Model Dashboard Widget -->
+<!-- Diplays full list of models using DataTables -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="tablesaw-bar mode-swipe tablesaw-all-cols-visible">
+                    <div class="tablesaw-sortable-switch tablesaw-toolbar">
+                        <label>Sort:
+                            <span class="btn btn-small btn-select">Rank ↑
+                                <select>
+                                    <option value="0_asc">Movie Title (A-Z)</option>
+                                    <option value="0_desc">Movie Title (Z-A)</option>
+                                    <option selected="" value="1_asc">Rank ↑</option>
+                                    <option value="1_desc">Rank ↓</option>
+                                    <option value="2_asc">Year ↑</option>
+                                    <option value="2_desc">Year ↓</option>
+                                    <option value="3_asc">
+                                        Rating ↑
+                                    </option>
+                                    <option value="3_desc">
+                                        Rating ↓
+                                    </option>
+                                    <option value="4_asc">Gross (A-Z)</option>
+                                    <option value="4_desc">Gross (Z-A)</option>
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="tablesaw-modeswitch tablesaw-toolbar">
+                        <label>Col
+                            <span class="a11y-sm">umn</span>s:
+                            <span class="btn btn-small btn-select">Swipe
+                                <select>
+                                    <option value="stack">Stack</option>
+                                    <option selected="" value="swipe">Swipe</option>
+                                    <option value="columntoggle">Toggle</option>
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="tablesaw-advance">
+                        <a href="#" class="tablesaw-nav-btn btn btn-micro left disabled" title="Previous Column"></a>
+                        <a href="#" class="tablesaw-nav-btn btn btn-micro right disabled" title="Next Column"></a>
+                    </div>
+                    <div class="tablesaw-advance minimap">
+                        <ul class="tablesaw-advance-dots">
+                            <li>
+                                <i></i>
+                            </li>
+                            <li>
+                                <i></i>
+                            </li>
+                            <li class="">
+                                <i></i>
+                            </li>
+                            <li class="">
+                                <i></i>
+                            </li>
+                            <li class="">
+                                <i></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <table class="tablesaw table-bordered table-hover table tablesaw-sortable tablesaw-swipe" data-tablesaw-mode="swipe"
+                    data-tablesaw-sortable="" data-tablesaw-sortable-switch="" data-tablesaw-minimap="" data-tablesaw-mode-switch=""
+                    id="table-1309" style="">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-priority="persist" class="tablesaw-cell-persist tablesaw-sortable-head"
+                                data-sortable-numeric="false">
+                                <button class="tablesaw-sortable-btn">Movie Title</button>
+                            </th>
+                            <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-sortable-default-col="" data-tablesaw-priority="3" class="tablesaw-sortable-head tablesaw-sortable-ascending tablesaw-priority-3"
+                                data-sortable-numeric="">
+                                <button class="tablesaw-sortable-btn">Rank</button>
+                            </th>
+                            <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-priority="2" class="tablesaw-sortable-head tablesaw-priority-2"
+                                data-sortable-numeric="">
+                                <button class="tablesaw-sortable-btn">Year</button>
+                            </th>
+                            <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-priority="1" class="tablesaw-sortable-head tablesaw-priority-1"
+                                data-sortable-numeric="">
+                                <button class="tablesaw-sortable-btn">
+                                    <abbr title="Rotten Tomato Rating">Rating</abbr>
+                                </button>
+                            </th>
+                            <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-priority="4" class="tablesaw-sortable-head tablesaw-priority-4"
+                                data-sortable-numeric="false">
+                                <button class="tablesaw-sortable-btn">Gross</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">Avatar</a>
+                            </td>
+                            <td class="tablesaw-priority-3">1</td>
+                            <td class="tablesaw-priority-2">2009</td>
+                            <td class="tablesaw-priority-1">83%</td>
+                            <td class="tablesaw-priority-4">$2.7B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">Titanic</a>
+                            </td>
+                            <td class="tablesaw-priority-3">2</td>
+                            <td class="tablesaw-priority-2">1997</td>
+                            <td class="tablesaw-priority-1">88%</td>
+                            <td class="tablesaw-priority-4">$2.1B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">The Avengers</a>
+                            </td>
+                            <td class="tablesaw-priority-3">3</td>
+                            <td class="tablesaw-priority-2">2012</td>
+                            <td class="tablesaw-priority-1">92%</td>
+                            <td class="tablesaw-priority-4">$1.5B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">Harry Potter and the Deathly Hallows—Part 2</a>
+                            </td>
+                            <td class="tablesaw-priority-3">4</td>
+                            <td class="tablesaw-priority-2">2011</td>
+                            <td class="tablesaw-priority-1">96%</td>
+                            <td class="tablesaw-priority-4">$1.3B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">Frozen</a>
+                            </td>
+                            <td class="tablesaw-priority-3">5</td>
+                            <td class="tablesaw-priority-2">2013</td>
+                            <td class="tablesaw-priority-1">89%</td>
+                            <td class="tablesaw-priority-4">$1.2B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">Iron Man 3</a>
+                            </td>
+                            <td class="tablesaw-priority-3">6</td>
+                            <td class="tablesaw-priority-2">2013</td>
+                            <td class="tablesaw-priority-1">78%</td>
+                            <td class="tablesaw-priority-4">$1.2B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">Transformers: Dark of the Moon</a>
+                            </td>
+                            <td class="tablesaw-priority-3">7</td>
+                            <td class="tablesaw-priority-2">2011</td>
+                            <td class="tablesaw-priority-1">36%</td>
+                            <td class="tablesaw-priority-4">$1.1B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">The Lord of the Rings: The Return of the King</a>
+                            </td>
+                            <td class="tablesaw-priority-3">8</td>
+                            <td class="tablesaw-priority-2">2003</td>
+                            <td class="tablesaw-priority-1">95%</td>
+                            <td class="tablesaw-priority-4">$1.1B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">Skyfall</a>
+                            </td>
+                            <td class="tablesaw-priority-3">9</td>
+                            <td class="tablesaw-priority-2">2012</td>
+                            <td class="tablesaw-priority-1">92%</td>
+                            <td class="tablesaw-priority-4">$1.1B</td>
+                        </tr>
+                        <tr>
+                            <td class="title tablesaw-cell-persist">
+                                <a href="javascript:void(0)">Transformers: Age of Extinction</a>
+                            </td>
+                            <td class="tablesaw-priority-3">10</td>
+                            <td class="tablesaw-priority-2">2014</td>
+                            <td class="tablesaw-priority-1">18%</td>
+                            <td class="tablesaw-priority-4">$1.0B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

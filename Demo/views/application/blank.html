@@ -1,0 +1,13 @@
+{{template "dochead"}}	
+
+{{if .flash.error}}
+<p class="error">
+    {{.flash.error}}
+</p>
+{{end}}
+
+<div class="row">
+{PAGE-CONTENT}
+</div>
+
+{{template "docfoot"}}	
