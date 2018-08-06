@@ -1,5 +1,21 @@
 <!-- Model Dashboard Widget -->
 <!-- Diplays full list of models using DataTables -->
+{{range $k,$v:=.List}}
+<tr>
+    <td>
+        {{$v.ID}}
+    </td>
+    <td>
+        {{$v.Body}}
+    </td>
+    <td>
+        <a href="/note/delete/{{$v.ID}}">
+            <button>Delete</button>
+        </a>
+    </td>
+</tr>
+{{end}}
+
 <div class="row">
     <div class="col-12">
         <div class="card">

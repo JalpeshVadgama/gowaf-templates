@@ -19,6 +19,7 @@ func main() {
 	// Register models
 	app.Model.Register(
 		//Framework Common Models
+		&models.Example{},
 		&models.Address{},
 		&models.Email{},
 		&models.Gender{},
