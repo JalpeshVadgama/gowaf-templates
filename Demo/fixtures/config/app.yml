@@ -3,8 +3,6 @@ domain: nlaak.com
 base_url: http://localhost:8090
 port: 8090
 fixtures_dir: ./fixtures 
-#static_dir: ./fixtures/assets
-#view_dir: views
 # database
 database: "postgres"
 #database_conn: "postgres://postgres@localhost/gowaf-templates?sslmode=disable"
