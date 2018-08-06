@@ -9,15 +9,10 @@ import (
 	// Import Application Models and Controllers here
 )
 
-func main() {
-	// Create a new MVC Application object
-	app, err := app.NewMVC()
-	if err != nil {
-		log.Fatal(err)
-	}
-
+// Register holds all the Models and Controllers you wish to register for the WebApp
+func Register(a *app.App) {
 	// Register models
-	app.Model.Register(
+	a.Model.Register(
 		//Framework Common Models
 		&models.Example{},
 		&models.Address{},
@@ -31,23 +26,30 @@ func main() {
 		&models.Person{},
 		&models.Account{},
 	)
-	app.Model.LogMode(true)
-	app.Model.AutoMigrateAll()
+	a.Model.LogMode(true)
+	a.Model.AutoMigrateAll()
 
 	// Register Controllers
-	app.AddController(controller.NewExample)
-	app.AddController(controller.NewLanding)
-	app.AddController(controller.NewAccount)
-	app.AddController(controller.NewAddress)
-	app.AddController(controller.NewEmail)
-	app.AddController(controller.NewGender)
-	app.AddController(controller.NewPersonName)
-	app.AddController(controller.NewPersonType)
-	app.AddController(controller.NewPhone)
-	app.AddController(controller.NewNote)
-	app.AddController(controller.NewCompany)
-	app.AddController(controller.NewPerson)
+	a.AddController(controller.NewExample)
+	a.AddController(controller.NewLanding)
+	a.AddController(controller.NewAccount)
+	a.AddController(controller.NewAddress)
+	a.AddController(controller.NewEmail)
+	a.AddController(controller.NewGender)
+	a.AddController(controller.NewPersonName)
+	a.AddController(controller.NewPersonType)
+	a.AddController(controller.NewPhone)
+	a.AddController(controller.NewNote)
+	a.AddController(controller.NewCompany)
+	a.AddController(controller.NewPerson)
+}
 
-	//Run the app
-	app.Run()
+func main() {
+	// Create a new MVC Application object
+	app, err := app.NewMVC()
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		app.Run(Register)
+	}
 }
