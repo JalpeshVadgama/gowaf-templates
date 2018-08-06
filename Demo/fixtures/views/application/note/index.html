@@ -1,0 +1,52 @@
+{{template "dochead" .}}
+
+{{if .flash.error}}
+<p class="error">
+    {{.flash.error}}
+</p>
+{{end}}
+
+<div class ="container" id="address">
+    <div class="card text-center">
+        <div class="card-header">
+            Create New Note
+        </div>
+        <div class="card-body">
+            <form method="post" action="/note/create" class="form-horizontal" role="form">
+            <div class="col-md-12">
+                <textarea name="body" class="form-control" rows="5"></textarea>
+            </div>
+            <div class="col-md-4 col-md-offset-4">
+                    <button class="btn btn-success" type="submit">create</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="notes">
+    <table>
+        <tr>
+            <th>
+                My Notes List
+            </th>
+        </tr>
+        {{range $k,$v:=.List}}
+        <tr>
+            <td>
+                {{$v.ID}}
+            </td>
+            <td>
+                {{$v.Body}}
+            </td>
+            <td>
+                <a href="/note/delete/{{$v.ID}}">
+                    <button>Delete</button>
+                </a>
+            </td>
+        </tr>
+        {{end}}
+    </table>
+</div>
+
+{{template "docfoot" .}}

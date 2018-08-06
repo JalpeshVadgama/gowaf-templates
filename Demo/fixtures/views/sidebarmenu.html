@@ -1,0 +1,94 @@
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                {{if .loggedin}}
+                <!-- User profile -->
+                <div class="user-profile">
+                    <!-- User profile image -->
+                    <div class="profile-img"> <img src="/static/images/users/1.jpg" alt="user" /> </div>
+                    <!-- User profile text-->
+                    <div class="profile-text"> <a href="#" class="dropdown-toggle link u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">{{.username}} <span class="caret"></span></a>
+                        <div class="dropdown-menu animated flipInY">
+                            {{if .profile}}
+                            <a href="/profile" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                            {{end}}
+                            {{if .mail}}
+                            <a href="/mail" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
+                            {{end}}
+                            <div class="dropdown-divider"></div> <a href="/settings" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                            <div class="dropdown-divider"></div> <a href="/account/logout" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End User profile text-->
+                {{end}}
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">TESTS</li>
+                        <li>
+                            <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-archive"></i><span class="hide-menu">System Messages</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><button class="tst1 btn btn-xs btn-info">SysMsg-Info</button></li>
+                                <li><button class="tst2 btn btn-xs btn-warning">SysMsg-Warning</button></li>
+                                <li><button class="tst3 btn btn-xs btn-success">SysMsg-Success</button></li>
+                                <li><button class="tst4 btn btn-xs btn-danger">SysMsg-Danger</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-small-cap">MODELS</li>
+                        <li>
+                            <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-archive"></i><span class="hide-menu">Simple Models</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/example">Example</a></li>
+                                <li><a href="/address">Addresses</a></li>
+                                <li><a href="/company">Companies</a></li>
+                                <li><a href="/email">Emails</a></li>
+                                <li><a href="/note">Notes</a></li>
+                                <li><a href="/person">People</a></li>
+                                <li><a href="/gender">Genders</a></li>
+                                <li><a href="/personaname">Person Names</a></li>
+                                <li><a href="/persontype">Person Types</a></li>
+                                <li><a href="/phone">Phones</a></li>
+                            </ul>
+                        </li>          
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="/account/register" class="btn btn-sm btn-success"> Register</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="/account/login" class="btn btn-sm btn-info"> Login</a>
+                        </div>
+                    </div>
+
+            {{if .loggedin}}
+            <!-- Bottom Logged In-->
+            <div class="sidebar-footer">
+                <!-- item-->
+                <a href="/settings" class="link" data-toggle="tooltip" title="Settings"><i class="mdi mdi-settings"></i></a>
+                <!-- item-->
+                <a href="/mail" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-mail"></i></a>
+                <!-- item-->
+                <a href="/account/logout" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-logout"></i></a>
+            </div>
+            <!-- End Bottom Logged End-->
+            {{else}}
+            <!-- Bottom NOT Logged In-->
+            <div class="sidebar-footer">
+                <!-- item-->
+                <a href="/" class="link" data-toggle="tooltip" title="Return to default landing page"><i class="mdi mdi-home"></i></a>
+                <!-- item-->
+                <a href="/account/register" class="link" data-toggle="tooltip" title="Create new account"><i class="mdi mdi-account-plus"></i></a>
+                <!-- item-->
+                <a href="/account/login" class="link" data-toggle="tooltip" title="Login with existing account"><i class="mdi mdi-login"></i></a>
+            </div>
+            <!-- End Bottom NOT Logged End-->
+            {{end}}
+        </aside>

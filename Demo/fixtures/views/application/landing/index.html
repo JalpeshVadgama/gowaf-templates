@@ -1,0 +1,13 @@
+<!-- Basic Default MVC View Template -->
+<!-- TODO: Update formatting to use Monster Admin (Bootstrap) -->
+{{template "dochead" .}}
+
+{{if .flash.error}}
+<p class="error">
+    {{.flash.error}}
+</p>
+{{end}}
+
+{Landing Page Content Here}
+
+{{template "docfoot" .}}

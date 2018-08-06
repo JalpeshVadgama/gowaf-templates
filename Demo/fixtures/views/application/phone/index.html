@@ -1,0 +1,102 @@
+<!-- Basic Default MVC View Template -->
+<!-- TODO: Update formatting to use Monster Admin (Bootstrap) -->
+{{template "dochead" .}}
+
+{{if .flash.error}}
+<p class="error">
+    {{.flash.error}}
+</p>
+{{end}}
+
+<div class ="container" id="phone">
+    <div class="card text-center">
+        <div class="card-header">
+            Create New Phone
+        </div>
+        <div class="card-body">
+            <div class="col-md-12">
+                <form class="form-horizontal" role="form">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>Create Phone</legend>
+
+                        <!-- Text input-->
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <label class="control-label" for="textinput">Country Code</label>
+                                <div class="">
+                                    <input type="text" name="code" placeholder="+1" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class=" control-label" for="textinput">Area Code</label>
+                                <div class="">
+                                    <input type="text" name="area" placeholder="(555)" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label" for="textinput">Number</label>
+                                <div class="">
+                                    <input type="text" name="number" placeholder="555-5555" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label" for="textinput">Type</label>
+                                <div class="">
+                                    <input type="text" name="phone_type" placeholder="type of Phone" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="pull-right">
+                                    <button type="submit" href="/phone" class="btn btn-default">Cancel</button>
+                                    <button type="submit" href="/phone/create" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    </div>
+
+    <!-- Table list of all models -->
+    <!-- TODO: Check Template Vars, If Route is Index Show This -->
+    <h1>My Phone List</h1>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>            
+                    <th>ID</th> 
+                    <th>Country</th> 
+                    <th>Area</th> 
+                    <th>Number</th> 
+                    <th>Type</th> 
+                </tr>
+            </thead>            
+            {{range $k,$v:=.List}}
+            <tr>
+                <td>{{$v.ID}}</td>
+                <td>{{$v.CountryCode}}</td>
+                <td>{{$v.AreaCode}}</td>
+                <td>{{$v.Number}}</td>
+                <td>{{$v.PhoneType}}</td>
+
+                <td><a href="/phone/delete/{{$v.ID}}"><i class="fa fa-trash text-danger"></i></a></td>
+            </tr>
+            {{end}}
+        </table>
+    </div>
+
+    <!-- TODO: Check Template Vars, If Route is Delete Show This -->
+    <!-- Show Flash Message with Succes or Fail of Delete -->
+
+    <!-- TODO: Check Template Vars, If Route is Update Show This -->
+    <!-- Show Flash Message with Succes or Fail of Update -->
+</div>
+
+{{template "docfoot" .}}
