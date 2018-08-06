@@ -46,7 +46,7 @@ func Register(a *app.App) {
 
 func main() {
 	// Create a new MVC Application object
-	app, err := app.NewMVC()
+	app, err := app.NewMVC(Version())
 	if err != nil {
 		log.Fatal(err)
 	} else {
