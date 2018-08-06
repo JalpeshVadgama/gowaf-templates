@@ -23,3 +23,9 @@ go get -u gopkg.in/yaml.v2
 ```
 4) From the root folder (cmdline/shell) type `go build`
 5) Or from VS Code, just start debugging/testing
+
+We try to stay on top of this, but if you get an error that a library is missing all you have to do is type:
+
+`go get -u {path/to/what/is/missing}`
+
+and then, please submit an issue so of what was missing so we can add it, Thanks!
